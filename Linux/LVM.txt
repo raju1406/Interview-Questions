@@ -1,0 +1,18 @@
+Step1 :- 
+
+ Suppose we have a LVM partition(/home) and running out of space and want to extend or increase file system size.
+ So to increase the size of the file system first we must see whether in volume group has free space or not by #vgdisplay vg_name.
+
+step2:-
+
+ If the Volume group has free space then we can increase by using #lvextend  -L +Size LV_Name
+after that we must execute the #xfs_growfs Lv_name for updating the increased partition size.
+
+
+step3:-  
+we need to check the is there any free physical volumes.if pv available by using #vgextend vg_name pv_name command 
+  we can add the physicalVolume into Volume group . after that we need to increase the Logical volume by using 
+  #lvextend  -L +Size LV_Name
+after that we must execute the #xfs_growfs Lv_name for updating the increased partition size.
+
+step4:-

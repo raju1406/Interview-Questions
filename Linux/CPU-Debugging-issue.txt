@@ -1,0 +1,17 @@
+CPU issues:-
+==========
+
+To debugging CPU issues:-
+======================
+#w
+#uptime
+#top
+#cat /proc/loadavg
+
+To increase the cpu load for testing 
+cat test.sh
+    while true
+            do  yes > /dev/null
+    done
+or 
+#dd if=/dev/sda of=/dev/zero

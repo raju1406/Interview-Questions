@@ -1,0 +1,24 @@
+SUSE Manager is an open source infrastructure management tool for Linux systems.
+Automated Linux server provisioning, configuration and patching
+Inventory management and asset tracking for hardware and software
+Software package management
+Server monitoring and reporting
+
+suse manager version 4
+
+
+SUSE Linux Enterprise Server 15  (LTSS) - 15 SP1 (LTSS) - 15 SP2 - 15 SP3
+   June-18-2020	4.12.14-150.52.1
+
+SUSE Linux Enterprise Server 12 (LTSS) - 12 SP1 (LTSS) - 12 SP2 (LTSS) - 12 SP3 (LTSS) - 12 SP4 (LTSS) - 12 SP5
+   Oct-21-2016	3.12.60-52.57.1
+
+SUSE Linux Enterprise Server 11 - 11 SP1 (LTSS) - 11 SP2 (LTSS) - 11 SP3 (LTSS) - 11 SP4 (LTSS)
+  SP1-June-2010	2.6.32.12-0.7.1
+
+SUSE Linux Enterprise Server 10 - 10 SP1 - 10 SP2 (LTSS) - 10 SP3 (LTSS) - 10 SP4 (LTSS)
+SUSE Linux Enterprise Server 9
+SUSE Linux Enterprise Server 8
+
+https://www.trustradius.com/compare-products/red-hat-enterprise-linux-rhel-vs-suse-linux-enterprise-server
+

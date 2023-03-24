@@ -1,0 +1,23 @@
+On one of my Linux Server, Oracle database was not running because of tmpfs . Oracle Team wants to extend the tmfs file system size from 2 GB to 4GB.
+
+Solution: tmpfs is a RAM based temporary file system which is generally mounted on /dev/shm. To   extend the tmfs file system 
+=======
+Step:1 Check tmfs file system size.
+	# df -h /dev/shm/
+	Filesystem Size   Used   Avail   Use%  Mounted on
+	tmpfs         2.0G 148K   2.0G   1%       /dev/shm
+
+Step:2 Edit the /etc/fstab file.
+	#vi /etc/fstab
+	          tmpfs /dev/shm tmpfs size=4g 0 0
+	:wq
+
+Step:3 remount the file system using mount command
+
+	# mount -o remount tmpfs
+
+Step:4 after check the tmfs file system
+
+	# df -h /dev/shm/
+ 	Filesystem Size Used Avail Use% Mounted on
+ 	tmpfs       4.0G 148K 4.0G  1% /dev/shm

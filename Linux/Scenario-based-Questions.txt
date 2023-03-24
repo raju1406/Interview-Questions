@@ -1,0 +1,2 @@
+1) A user is not able to ssh to a remote server, what   could be the possible cause?
+    Reason1 :-  we need to check configuration file /etc/ssh/sshd_config

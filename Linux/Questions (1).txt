@@ -1,0 +1,141 @@
+﻿1) Boot process in 6$7? Major differences in both(init.d & system.d)?
+
+==> Fast boot. RHEL7 boots faster than its predecessors. This is achieved by simultaneously starting services that are not dependent on each other.
+ In older versions, services used to start one after another. So if one service stuck or delays to start it subsequently delays the following process and boot time.
+ This hurdle is removed in RHEL7 allowing it to boot much faster.
+
+==> A new way to manage services on RHEL7 is systemctl. Older service and chkconfig command is being replaced with systemctl.
+==> Run levels being called as targets. In RHEL7 run levels are called targets. Default target (run-level) is defined in /etc/systemd/system/default.target. 
+==> Former firewall iptables now replaces by firewalld (Firewall Dynamic). iptables still exist in the system and you can disable firewalld and use iptables.
+please refer more details https://www.2daygeek.com/comparison-difference-between-rhel-8-vs-rhel-7-vs-rhel-6/
+====================================================================================================================================
+
+2) RHEL 6 & 7 file system type, and differences in both. Max file system size in both?
+
+==> The default file system is XFS. RHEL6 was launched with EXT4 as the default file system. XFS is a highly scalable, high-performance file system. 
+==> XFS supports metadata journaling, which helps in quicker crash recovery. This means file system checks will take very little time. 
+==> The XFS file system can be defragmented and extended while mounted. 
+==> This makes it more admin friendly in a production environment since it avoids downtime of file systems for activities. Supports only 64 bit systems.
+==> Max Supported (Individual) File & Filesystem Size	XFS= 500TB & XFS= 500TB	EXT4= 16TB & EXT4= 16TB
+
+==================================================================================================================================
+
+3) nic bonding configuration field, location of the configuration file? What are fieldls are presets in configuration file?
+
+     rhel6:  we need to create a configure file under /etc/modprobe.d/ like bonding.conf 
+       in configuration file we need enter the "alias bond0 bonding "
+          To check the bonding options  :  cat /proc/net/bonding/bond0
+          To check the bonding names    : cat /sys/class/net/bonding_master
+          To see which bonding option applied :  cat /sys/class/net/bond0/bonding/mode
+    Please refer how to create a bonding in rhel 6  https://www.unixarena.com/2013/06/how-to-configure-bondingteaming-on.html/
+
+==================================================================================================================================
+
+4) If a nic card id down then what are the steps for brining up another nic card?
+  ==>     we have to configure bonding 
+  
+
+5) If we replaced a  nic card then what will 
+
+ ==> we have to assign a ip address ,gateway,netmask under /etc/sysconfig/network-scripts/ifcfg-ens190(nic card name)
+==> After that we need restart the service  by using #systemctl restart network  or #service network restart
+
+6) how to calcutate load avarage based on CPU Cores?
+     
+
+=======================================================================
+7) Uid/Gid if chganged then what will happen?
+
+    If you change group/user id you must also find and change owners of files. It should not be hard, if users had write access only to their home directories. 
+Some services can also be affected, for example nfs, if you use ids.
+
+=====================================================================
+8) Sar report genaration? location the file? how to check the logs?
+
+==> To get historic memory utilization details.
+            #sar -r -f /var/log/sa/sa01
+==> Usually, sysstat, which provides a sar command, keeps logs in /var/log/sysstat/ or /var/log/sa/ with filenames such as /var/log/sysstat/sadd 
+where dd is a numeric value for the day of the month (starting at 01). By default, the file from the current day is used; 
+however, you can change the file that is used with the -f command line switch. Thus for the 3rd of the month you would do something like:
+
+            # sar -f /var/log/sysstat/sa03
+==>  If you want to restrict the time range, you can use the -s and -e parameters.
+==>  If you want to routinely get yesterday's file and can never remember the date and have GNU date you could try
+
+            # sar -f /var/log/sysstat/sa$(date +%d -d yesterday)
+======================================================================
+9) TCP/UDP Protocals? whitch one is fast?
+
+TCP is a connection-oriented protocol, whereas UDP is a connectionless protocol. 
+A key difference between TCP and UDP is speed, as TCP is comparatively slower than UDP. Overall, 
+UDP is a much faster, simpler, and efficient protocol, however, retransmission of lost data packets is only possible with TCP. 
+====================================================================================================================================
+10) Raid level configuration, and Diffent types of ride levels? How may disk are used for diffent raid levesl?
+
+11) Run level conguration field location and diffenet run levels?
+=============================================================================
+12) Hardlink and Softlink creation, Diffeneces?
+
+Hardlink : A hard Link
+can’t cross the file system boundaries,
+can’t link directories,
+has the same inodes number and permissions of original file,
+permissions will be updated if we change the permissions of source file,
+has the actual contents of original file, so that you still can view the contents, even if the original file moved or removed.
+# ln source.file hardlink.file
+
+soft link:
+can cross the file system,
+allows you to link between directories,
+has different inodes number and file permissions than original file,
+permissions will not be updated,
+has only the path of the original file, not the contents.
+
+# ln -s source.file softlink.file
+================================================================================================================================
+
+13) SSH, TELNET port numbers?
+ans:22 ssh, Telnet 23
+=======================================================================================================================
+
+14) Sheduling a job by using cron and anacron?
+=============================================================
+
+
+15) How to check open ports status? weather port in use or not?
+netstat -ntlp
+====================================================================
+16 )What is a process, demon process?
+
+A program like Iguana can be run in different modes depending on the operating system. 
+These modes are known as Processes, Daemons, and Services.
+=====================================================================================================================================
+17) front end and back end process in linux?
+===========================================================================================================
+18) What is a zombi process, how to identify and kill?
+
+Zombie processes in Linux are sometimes also referred to as defunct or dead processes. 
+They’re processes that have completed their execution, but their entries are not removed from the process table.
+
+kill -9 <pid>
+==================================================================================================
+19) Kernal patching process, kernal vertions on 6 & 7?
+
+20) Perfomance related issues(Memory and cpu related issues)?
+
+21) How to clear cpu alerts, if it reaches 100% utilization then what we have to do?
+
+22) If a server is pinging/up a particular user unable to login then what is the procces to identify the issue, and what are the steps for resolving the issue?
+
+23) If a server boots with diffent ip thent what we have to do for resolving the issue?
+
+24) If a mount point if full then how to increas the mount point size if it is present in LVM, If not then what is the process?
+
+25) how to increase and decrease the mount point size in LVM?
+
+26) What is the NAS and SAN mount points? differences?
+
+27) NFS mount process?
+
+28) How to add a lun? applimg file system and mount to a server?
+

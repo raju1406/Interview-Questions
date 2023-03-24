@@ -1,0 +1,24 @@
+What is hard link and soft link? How to create symbolic link?
+   
+Soft Link 					Hard link
+=========				=========
+Size of link file is equal to no. of characters	Size of both file is same
+in the name of original file
+
+Inode no. of source and link file is		Inode no. of both file is same
+different 
+if original file is deleted, link is broken and	If original file is deleted then also link will contain data
+data is lost
+
+SHORTCUT FILE 				BACKUP FILE
+
+
+How do I create symbolic link?
+
+To create symbolic link by using:
+#ln  -s  <source_path>  <destination_path>
+#ln -s /path/to/file1.txt /path/to/file2.txt
+
+(inode number will be same for hard linked file )
+
+#ln /mades/file1 /mades/file2 - ( create hard link)

@@ -1,0 +1,91 @@
+1.List the files in current directory sorted by size ?
+	#ls -l | grep ^- | sort -nr 
+
+2.List the hidden files in current directory ? 
+	 #ls -a1 | grep "^\." 
+
+3.Delete blank lines in a file ? 
+	#cat sample.txt | grep -v ‘^$’ > new_sample.txt 
+	
+4.Search for a sample string in particular files ? -
+	#grep “Debug” *.confHere grep uses the string “Debug” to search in all files with extension“.conf” under current directory. 
+
+5.Display the last newly appending lines of a file during appendingdata to the same file by some processes ? 
+	#tail –f Debug.logHere tail shows the newly appended data into Debug.log by some processes/user. 
+
+6.Display the Disk Usage of file sizes under each directory in currentDirectory ? 
+	#du -k * | sort –nr (or) du –k . | sort -nr 
+
+7.Change to a directory, which is having very long name ? -
+	#cd CDMA_3X_GEN*Here original directory name is – “CDMA_3X_GENERATION_DATA”. 
+
+8.Display the all files recursively with path under current directory ? -
+	#find . -depth -print 
+
+9.Set the Display automatically for the current new user ? 
+	#export DISPLAY=`eval ‘who am i | cut -d"(" -f2 | cut -d")" -f1'`Here in above command, see single quote, double quote, grave ascent is used. Observe carefully. 
+
+10.Display the processes, which are running under yourusername ? 
+	#ps –aef | grep MaheshvjHere, Maheshvj is the username. 
+11.List some Hot Keys for bash shell ? -
+	 Ctrl+l – Clears the Screen. Ctrl+r – Does a search in previously given commands in shell. Ctrl+u - Clears the typing before the hotkey. 
+                   Ctrl+a – Places cursor at the beginning of the command at shell. Ctrl+e – Places cursor at the end of the command at shell. 
+                    Ctrl+d – Kills the shell. Ctrl+z – Places the currently running process into background. 
+
+12. Display the files in the directory by file size ? -
+	#ls –ltr | sort –nr –k 5 
+
+13.How to save man pages to a file ? 
+	#man <command> | col –b > <output-file>Example : man top | col –b > top_help.txt 
+
+14.How to know the date & time for – when script is executed ? 
+	Add the following script line in shell script.
+	#eval echo "Script is executed at `date`" >> timeinfo.infHere, “timeinfo.inf” contains date & time details ie., when script is executed and history related to execution. 
+
+15.How do you find out drive statistics ? 
+	#iostat -E 
+
+16.Display disk usage in Kilobytes ? 
+	#du -k 
+
+17.Display top ten largest files/directories ? -
+	#du -sk * | sort -nr | head 
+
+18.How much space is used for users in kilobytes ? 
+	#quot -af 
+
+19.How to create null file ? -
+	#cat /dev/null > filename1 
+
+20.Access common commands quicker ? 
+	#ps -ef | grep -i $@ 
+
+21.Display the page size of memory ? 
+	#pagesize -a 
+
+22. What is my linux distribution?
+	#cat /etc/os-release  or #cat /etc/os-release
+
+23.Display the no.of active established connections to localhost ? -
+	#netstat -a | grep EST 
+
+24.Display the state of interfaces used for TCP/IP traffice ? 
+	#netstat -i 
+
+25.Display the parent/child tree of a process ? 
+	#ptree <pid> Example: ptree 1267 
+
+26.Show the working directory of a process ? 
+	#pwdx <pid> Example: pwdx 1267 
+
+27.Display the processes current open files ? 
+	#pfiles <pid> Example: pfiles 1267 
+
+28.Display the inter-process communication facility status ? 
+	#ipcs 
+
+29.Display the top most process utilizing most CPU ? 
+	#top –b 1
+ 
+30.Alternative for top command ?
+	#prstat -a 

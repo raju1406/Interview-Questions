@@ -1,0 +1,58 @@
+1.Tell me about your self ?
+Ans:-
+===
+	My Name is Krishna . I live in banglore. I have done B.tech from JNTU university.Total I have 3 years of exeperiance as a linux administrator. 
+	Currently i am working with wipro under payroll soft tech solutions and previous i had worked with TCS .
+	My roles and responisibilities are
+	I am getting differenet types of Incidents tickets,change request tickets,attending of bridge calls
+and weekly CAB calls. so we need to create the change request ticket for weekend plan chages like build
+the new servers  ,file system extends,os-patching,hardware replacement and also i am getting different types 
+of incidents tickets file system is full, cpu load is high, file system corrupt,file sytem read only mode,inode is full and removing inactive users and 
+setting the cronjobs,creating users and groups as per requirement and i can able to write automation scripts i am suppoting 24/7.I am doing l1 and l2 level kind of support.
+I have good knowledge on cloud technologies like AWS and ci/cd knowledge on jenkins and good exposure on 
+ansible,docker,maven and git.
+
+2.why are you looking for a job change?
+ans:-
+====
+I am thankful to my current/previous organization because i have learnt lot of things from there. According to me chages are necessary to enhance my skills,
+knowledge and for personal growth and financial growth.Your organization is the good platform where i can learn/show more.
+
+3.About Your Project 
+ans:-
+===
+  We are supporting IGLOO cropartion.gloo Products Corp. It is an American manufacturer of ice chests, drink containers and supporting accessories.
+ It is headquartered in Katy Waller County, Texas, United States. Igloo began in 1947 as metalworking shop that produced metal water coolers for 
+   blue collar workers.
+	 We are supporting various technologies in this project like Oracle EBS(ERP),OBIEE,oracle 12c data base,oracle linux,centos,solaris,
+                 windows server 2016 ,OVM virtual software,vmware.
+
+4.About Your Environment?
+Ans:-
+===
+	==> shift-timing:- In my team we are 3 members ,it is rotational shift. mostly i am getting morning shift and nighshift 
+	==> TL-1 ,PL-1, SDM-1
+	==> how you all manage 24/7 by your team?  -> we have a shift-Roaster
+	==> How many server in your environment> we have total 850 servers,in that 700 vm's and 150 pm's -> 10prd db servers, 10 uat server,20 qa servers and some other servers.
+	==>we don't have any High availability servers OS side,database have some replication servers.
+5.Type of issues you face daily?
+Ans:-
+===
+	File system related issues like file system/mount point full,inode is full,file system corrupt ,creating users ,groups and giving the permissions to files and directoris.
+6.What are critical issues u faced and resolved in ur experience?
+Ans:-
+===
+	In my exeperiance i had faced so many issues and resolved.one of the major issue is one of the VM ,we have to rebuild with same specification,
+                so for that we removed vm and  installed same o/s oracle linux 6.5 64bit and same IP address,it got successfully installed.
+	After installation when ever i execute #ifconfig -a ,the nic card showing with eth1 actually its shows eth0.Then i struggled very lot ,
+                and trobule shooted by founding file under /etc/udev/rules.d/70-persistent-net.rules ,it has already eth0.
+	so i deleted this file. it's got resolved. The reason is previous vm before installed it has network bonding.we didn't remove that bonding properly.
+7.how many datacenters?
+Ans:-
+===
+	we have only one traditional datacenter that is location toronto,Canada.
+
+8.What was the Ticketing tool you use?
+Ans:- Wolken software
+===
+	

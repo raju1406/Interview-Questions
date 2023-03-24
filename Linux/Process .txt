@@ -1,0 +1,13 @@
+=> To check all pid of particular service
+  #ps -p $(pidof httpd)
+
+=> To see particular service elapsed time
+   #ps -p <pid> -o etime
+   #ps -p 1080 -o etime
+
+=> To see hirarchy of the process or sevice
+  #ps --forest -C httpd -o pip.ppid.cmd
+
+
+=>To display particular lines like pid ,vsize ,rss ,%cpu  
+  #ps axo pid,vsize,rss,%cpu --sort=-rss|less

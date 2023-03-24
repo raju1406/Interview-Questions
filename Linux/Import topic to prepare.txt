@@ -1,0 +1,25 @@
+ Booting - https://www.tecmint.com/linux-boot-process/
+RHEL6/7 - https://arkit.co.in/rhel-6-vs-rhel-7-difference-previous-newer-version/
+Book which covers most of networking part in detail - http://zai.lecturer.pens.ac.id/Kuliah/Komunikasi%20Data/Buku%20Referensi/Data%20Communications%20and%20Networking%20By%20Behrouz%20A.Forouzan.pdf
+Networking video playlist - https://www.youtube.com/playlist?list=PLF360ED1082F6F2A5
+Memory/swap management - https://superuser.com/questions/1104553/linux-swap-slowing-my-system
+IOwait. https://support.hpe.com/hpsc/doc/public/display?docId=c02783994
+Iostat -IO monitoring https://www.tecmint.com/linux-performance-monitoring-with-vmstat-and-iostat-commands/
+Understand routing  https://superuser.com/questions/331720/how-do-i-set-the-priority-of-network-connections-in-ubuntu
+Website error codes  https://www.digitalocean.com/community/tutorials/how-to-troubleshoot-common-http-error-codes and http://www.windowsnetworking.com/articles-tutorials/network-protocols/Understanding-HTTP-Protocol-Part1.html
+Manage partitions https://www.howtogeek.com/106873/how-to-use-fdisk-to-manage-partitions-on-linux/    and  https://blog.myduniahosting.com/how-to-resize-your-root-diskpartition-online-for-linux/
+Zombie and orphan process  https://www.gmarik.info/blog/2012/orphan-vs-zombie-vs-daemon-processes/
+DHCP /DORA process  https://ipwithease.com/understanding-dora-process-in-dhcp/
+How to understand if system is under memory pressure https://www.tecmint.com/check-memory-usage-in-linux/
+TCP- Sequence and ack numbers – https://youtu.be/8XJPZttC4RM
+Yum history manipulations https://www.thegeekdiary.com/yum-history-command-examples-to-display-rollback-redo-undo-yum-transactions/
+https://www.linuxnix.com/what-is-linuxunix-dmesg-command-and-how-to-use-it/
+website troubleshooting https://www.digitalocean.com/community/tutorials/how-to-troubleshoot-common-site-issues-on-a-linux-server
+TCP- Sequence and ack numbers – https://youtu.be/8XJPZttC4RM
+User management and permissions -https://www.linux.com/learn/understanding-linux-file-permissions
+Process Management -  http://ryanstutorials.net/linuxtutorial/processes.php  and  http://www.hostingadvice.com/blog/linux-process-management-commands-know/  and  http://www.informit.com/articles/article.aspx?p=370047
+Memory management - http://www.tldp.org/LDP/tlk/mm/memory.html and  http://linux-training.be/sysadmin/ch18.html
+Cisco - https://learningnetwork.cisco.com/community/certifications/ccna/icnd1/study-material
+TCP - http://www.tcpipguide.com/free/t_TCPIPArchitectureandtheTCPIPModel-2.htm
+3 way handshake - https://support.microsoft.com/en-in/help/172983/explanation-of-the-three-way-handshake-via-tcp-ip
+NAT - http://www.ciscopress.com/articles/article.asp?p=1725268

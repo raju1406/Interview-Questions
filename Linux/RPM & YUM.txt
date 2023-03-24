@@ -1,0 +1,24 @@
+RPM & YUM :-
+============
+
+==> RPM stands for Redhat package Management where yum stands for Yellow dog update modier
+
+==> If you want to install packages by using RPM we need to enter into package location where as yum no need to go to the package location 
+but we need to configure  repository for YUM.
+
+==> rpm does not resolve the dependencies where as yum resolve dependencies
+
+example of rpm
+To install package
+#rpm  -ivh  <package_name>
+
+To remove package
+#rpm -e <pacakge_name>
+
+
+example of yum
+To install package
+# yum install <package_name>
+
+To remove package
+#yum remove  <pacakge_name>

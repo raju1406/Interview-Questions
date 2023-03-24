@@ -1,0 +1,9 @@
+I/O Performance Troubleshooting:-
+===========================
+
+#top
+in top command we need to check % of waiting 
+
+#iostat 
+#iotop    (yum install -y iotop)
+#iotop -o ==> it will show only i/o process

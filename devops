@@ -1,0 +1,78 @@
+  ### What is devops ?
+  + Devops bridges the department silos by bringing Developement and Operations together.
+  + Devops is implemented by different customers in different ways.
+  + In some cases, Devops engineer works within the Scrum team to help them on quick releases.
+  + In some cases, Scrum teams can directly release to production using automated capability.
++ Devops works aroudn build and release management only - Continuous Intergration/Testing/Delivery(CI and CD). Customers mainly talk about the tooling and automation required to improve the flow within the build and release.
++ Devops works from Build and Release Management to Production Support - CI and CD , Smart monitoring , Bots assisted Troubleshooting . Customers talk about logging data analytics,self-healing and so on to keep the production up and running.
++ **Devops it a hot skill:** Normally , Scrum teams need to raise a request with IT operations to get an environment for testing and wait for days/weeks. But , in orgainizations that apply Devops practices,it is possible for the teams to get the required enviroment in minutes.
+
+### Daily activity from morning to evening 
++ **9AM:** 
++ I start the day be reviewing what I did yesterday and my plan for today. We do that by looking at our **Sprint Backlog** in our **DevPlus**.
++ I also look at our test environment to see if latest full functional test run is fine or I have failures to fix. Now , I know my day's plan . I update the **Kanban Board** to show latest status.
++  **10AM:**
++  I meet my team for Daily Scrum in front of our **Kanban Board** . I update the team about my plan and any issues I face. I also hear from others . We ensure that overall progress looks fine to meet the sprint Goal.
++  **12PM:**
++  I continue my work . I keep the Kanban Board updated. Scrum Master walks-in and looks at the board to see if there are impediments. We have a brief chat on a help that I needed about an external request.
++  **2PM:** 
++  I check-in my code in GIT , Jenkins server automatically integrates, Complies,and runs static code analysis and integration tests on my code. In the end, check in is rejected. I pair with collegue to fix the code quality issue and successfully check in now.
++  **6PM:**
++  The tool **Ansible** automatically picks up new build and deploys in user test enviroment for business user to test. Wow! That didn't require me to send an email to ops engingeer!
++  I update Kanban Board and leave for the day.
+
+
+@@ -1,3 +1,6 @@
+- Mock interview video - https://youtu.be/i7YJesoeWFI
+- Mock interview Answers - https://youtu.be/5w8qVukxXXY 
+
+GIT
+---------------------------------------------------------------------------------------------------------------------------------
+1. Why we need git? What makes git unique from other tools like SVN?
+2. Let's say i have maven repo cloned on to my local, did some changes and i have build the code now target folder will be generated. So now when i do git operations like git add, git commit or any other git operations target folder should not be considered, how would you achieve the same?
+3. difference between git pull and git fetch?
+4. How to clone specific branch in git?
+   
+Maven
+--------------------------------------------------------------------------------------------------------------------------
+1. when i issue mvn install what all things happen in background?
+2. what are the settings you need to do before running mvn deploy?
+3. why maven takes much time for 1st execution and from 2nd execution it will take less time?
+   
+Unix and Shell Scripting 
+--------------------------------------------------------------------------------------------------------
+1. How to get present working folder?
+2. How to copy files from local windows machine to cloud based Linux machine?
+3.  A shell script named test.sh can accept 4 parameters i.e, a,b,c,d. the parameters wont be supplied in order always and number of parameters might also vary( only 2 parameters user might supply sometimes), how to identify position of letter c?
+   
+Ansible
+---------------------------------------------------------------------------------------------------------------------
+1.  Why we need ad-hoc ansible commands, scenario where you have used ansible ad-hoc command?
+2.  When i need detailed logs on executing ansible playbook what option i need to use?
+3.  what is ansible.cfg file?
+4.  what are the modules have you worked on? which module will you use for getting the file from node to master?
+5.  Lets say i have a playbook which has 5 tasks in playbook, first 2 tasks should run on local machine and other 3 tasks should run on node?
+   
+Jenkins
+-----------------------------------------------------------------------------------------------------------------------
+1.  How to save only last 5 builds of jenkins job?
+2.  Have you worked on Jenknsfile? can we use docker container as a node in Jenkinsfile? Who will handle docker container creation and deletion? If i am building a maven project always docker container is fresh instance it will try to download dependency from repository, what measures you will take to reduce build time?
+3.  Why we need multi branch pipeline?
+4.  If you forget Jenkins password, how would you login back?
+   
+Docker
+------------------------------------------------------------------------------------------------------------------------------
+1.  Any 3 best practices of docker?
+2.  Difference between docker stop and docker kill?
+3.  Command to list conatiners which state is exited?
+4.  command to clean-up docker host ( deleting stopped conatiners, dangling images and unused networks)?
+5.  What version of docker you have used? Specific reason to use that particular version?
+6.  Can we have multiple CMD in Dockerfile?
+7.  Have you worked on docker swarm and docker compose?
+   
+Kubernetes
+--------------------------------------------------------------------------------------------------------------------------------------
+1.  Can we have multiple conatiners in a pod? Can we have similar conatiners in a pod? Lets say i have 4 conatiners, one of them has failed how would you check which container has failed?
+2.  What is liveness and readiness probe? Why we need them?
+3.  Have you worked on kubernetes monitoring? Which tools you have used?
+4.  Can we deploy a pod on particular node?

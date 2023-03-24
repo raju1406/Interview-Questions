@@ -1,0 +1,29 @@
+booting process:-
+=============
+step1: post :- when ever power on self test 
+            The cpu bring up BIOS , Basic input output system
+       based on the boot priorty the bios simple loads and execute MBR
+step2:-  MBR stands for Master boot record it is located first sector of HDD with 512 bytes size. In the 512 bytes size ,446 byte boot loader(IPL) , 64 bytes for partion table information(PTI), 2 bytes for mbr validation check
+              MBR doesn't have filesystem knowledge so MBR simple loads and execute GRUB2
+
+step3:- Grand unified boot loader 2. it is responsible to execute kernel image and  initramfs image
+              grub file location under /boot/grup2/grub.conf  ==> link file also under /etc/grub2.conf
+##              	onemore file /etc/default/grup 
+##	systemctl get-default
+##       	 ls -l /etc/systemd/system/default.target
+##	who -r
+##	runlevel
+##	systemctl set-default multi-user.target
+             
+step4:-  kernel loads the necessary driver modules from initrd image
+             The kernel starts the systemd process with a process ID of 1 (PID 1).
+
+step5: systemd reads the file /etc/systemd/system/default.target  file . we have total 7 runlevel targets
+Run Level	Target Units			Description
+0	runlevel0.target, poweroff.target	Shut down and power off
+1	runlevel1.target, rescue.target		Set up a rescue shell
+2,3,4	runlevel[234].target, multi- user.target	Set up a nongraphical multi-user shell
+5	runlevel5.target, graphical.target	Set up a graphical multi-user shell
+6	runlevel6.target, reboot.target		Shut down and reboot the system
+
+systemd brings the system to the state defined by the system target

@@ -1,0 +1,58 @@
+what is Hypervisor?
+================
+=> Hypervisor is a s/w program that manages mulitple o/s's(or mulitple instances of the same o/s) on a single computer system.
+=> The hypervisor manages the system's processor,memory and other resources to allocate what each o/s requires.
+=> Hypervisor are designed for a particular processor architecture and may also be called Virtualization managers.
+
+Hypervisor Types:-
+===============
+Type-1 : Native(bare-metal) hypervisors
+--------------------------------------------------------
+  The Hypervisor runs directly on the hosts h/w to control the h/w and to manage guest o/s's.
+   Ex:- XEN,VMWare ESXI,Microsoft Hyper-V
+Popular Hypervisors
+=================
+what is XEN:-
+------------------
+ => Xen is an open-source paravirtualization technology that provides a platform for running multiple o/s's in parallel on one physical h/w resource.
+ => Originally developed in 2003 at the university of Cambridge computer laboratory.
+What is KVM:-
+---------------------
+=> Kernel-based virutal Machine (KVM) is an open source virtualization technology built into Linux. Specifically , KVM lets you turn Linux into a hypervisor that allow a host
+     machine to run mulitple , isolated virtual environments called guests or virtual machines(VMS)
+What is SAN:-
+------------------
+=> Storage area networks provide connectivity to the virtual server either the Fibre Channel (FC) or Iscsi protocols.
+=> A SAN or storage network is a computer network which provides access to consolidated , block-level data storage.
+=> SANs are primarly used to enhance accessibility of storage devices , such as disk array and tape libraries, to servers so that the devices appear to the o/s as locally-attached devices.
+=> A SAN typically is a dedicated n/w of storage devices not accessible through the local area network(LAN) by other devices , thereby preventing interface of LAN traffic data transfer
+SAN storage has the following pros and cons:-
+---------------------------------------------------------------
+=> SAN storage is sharable. Resources may be easily shared between multiple virtual server hardware devices. This is important in clustered virtual servers environments.
+=>SANs are highly scalable ,both from a capacity and performance perspective. For large deployments of virtual servers,scalability is extremely important and the whole premise of SAN is to provide high levesl of sclale.
+=> SAN storage provides synchronous replication . Synchronous replication isn't typically available on NAS implementations,and for many environments , this may be a key requirement for a disaster recovery strategy.
+=> SAN environments are highly resilient. SAN environments are well equipped with dual fabrics , HBAs and highly available storage arrays.
+
+What is NAS:-
+------------------
+=> Network Attached Storage(NAS) is a file-level(as opposed to block-level) computer data storage server connected to a computer network providing data access to a heterogeneous group of clients.
+=> NAS is specialized for serving files either by its h/w , s/w , or configuration.It is often manufactured as a computer appliance - a purpose built specialized computer.
+=> NAS systems are networked appliances that contain one or more storage drives, often arranged into logical,redundant storage containers or RAID. NAS removes the responsibility of file serving from other servers on the n/w.
+NAS pros and cons :-
+---------------------------
+=> NAS is shareable
+=>NAS is scalable in terms of capacity and performance.
+=>NAS provides advanced features such as thin provisioning,replication and snapshots.
+=>NAS abstracts storage management from the server.This means the vm images can be managed (and subsequently backed up) as a f/s.
+=>NAS can be costly .Despite the cost, the range of NAS devices on the market is extremely wide  from saml four disk devices to multi-petabyte h/w configurations.
+
+what type of storage best fits your virtual environment:-
+-----------------------------------------------------------------------------
+=> Everyone has different needs and requirements for their virtual environments . Choose Xen and KVM if cost is not an issue,your virtual environments is large and if your environement does require advanced features like data replication.
+=> Choose NAS or SAN if your are building large-scale virtual environments.
+=> NAS is the better option if you require the ability to clone large numbers of virutal hosts. However , SAN will be a better fit if you require the highest levels of availability and resiliency.
+=> whichever platform you choose, we can expect virtual servers to form a major part of all IT deployments in the future.
+Type-2: Hosted Hypervisors
+ --------------------------------------
+   These hypervisors run on a conventional o/s just as other computer programs do
+    Ex:- VMware workstation , virtual Box

@@ -1,0 +1,36 @@
+Sending a simple mail through command line:-
+=======================================
+# mail -s "Hello World" someone@example.com
+cc: someotherone@example.com
+Hello
+      please check you end.
+ctl+d
+
+==> Subject and Message in a single line
+#mail -s "This is the subject" somebody@example.com <<< 'This is the message'
+or
+#echo "This is the body" | mail -s "Subject" -aFrom:Harry\<harry@gmail.com\> someone@example.com
+
+==>Take message from a file
+#mail -s "Hello World" user@yourmaildomain.com < /home/user/mailcontent.txt
+
+==>Specify CC and BCC recipients
+#mail -s "Hello World" user1@example.com -c usertocc@example.com -b usertobcc@example.com
+
+==>Sending to multiple recipients
+# mail -s "Hello World" user1@example.com,user2@example.com
+
+==>Specify the FROM name and address
+#echo "This is the message body" | mail -s "This is the subject" mail@example.com -aFrom:sender@example.com
+
+==>Send mail to a local system user
+#mail -s "Hello World" username
+
+==>Verbose output
+# mail -v -s "This is the subject" somebody@example.com <<< 'This is the message'
+
+==>Read mails
+#mail
+
+==> To check the mail queue
+#mailq

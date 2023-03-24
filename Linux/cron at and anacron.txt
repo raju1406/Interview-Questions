@@ -1,0 +1,14 @@
+
+Cron					Anacron
+It’s a daemon				It’s not a daemon
+Enables you to run scheduled jobs every minute	Only enables you to run scheduled jobs on daily basis
+Can be used by both normal users and root	Can only be used by root unless otherwise
+
+
+The major difference between cron and anacron is that cron works effectively on machines that will run continuously while anacron is intended for machines hat will be powered off in a day or week
+
+cron command is used to schedule the task daily at the same
+time repeatedly.
+
+"at" command is used to schedule the task only once i.e to
+run only one time.

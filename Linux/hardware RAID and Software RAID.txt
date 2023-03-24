@@ -1,0 +1,12 @@
+What is the difference between hardware RAID and Software RAID?
+========================================================
+The hardware-based RAID is independent from the host. A Hardware RAID device connects to the SCSI controller and presents the RAID arrays as a
+ single SCSI drive. 
+
+An external RAID system moves all RAID handling "intelligence" into a controller located in the external disk subsystem.
+ The whole subsystem is connected to the host via a normal SCSI controller and appears to the host as a single disk.
+
+Software RAID is implemented under OS Kernel level. The Linux kernel contains an MD driver that allows the RAID solution to be completely 
+hardware independent.
+
+ The performance of a software-based array depends on the server CPU performance and load.
